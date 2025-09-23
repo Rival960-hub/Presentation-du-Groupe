@@ -1,0 +1,57 @@
+/* Corps et header */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  text-align: center; /* pour centrer le h1 */
+}
+
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 30px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+/* Section principale */
+#main-content {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+#main-content h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Grid pour les membres */
+.members-grid {
+  display: grid; /* placés automatiquement en lignes et colonnes*/ 
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes de même taille, chaque colonne prend la même largeur disponible.*/
+  gap: 20px; /* espace entre les cartes */
+}
+
+/* Cartes des membres */
+.member-card {
+  background-color: #E9F8FC; 
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+/* Paragraphes à l'intérieur des cartes */
+.member-card p {
+ margin: 5px 0;
+ line-height: 1.5;
+}
+
+/* Faire que la 5ème carte prenne toute la largeur */
+.members-grid .member-card:nth-child(5) {
+ grid-column: 1 / -1; /* prend toutes les colonnes disponibles */
+}
