@@ -12,11 +12,14 @@ header {
   padding: 30px;
 }
 
+.site-logo {
+  width: 60px;           /* taille du logo */
+  height: auto;          /* garde les proportions */
+}
 header h1 {
   margin: 0;
   font-size: 3rem;
 }
-
 /* Section principale */
 #main-content {
   max-width: 1000px;
@@ -24,7 +27,7 @@ header h1 {
   padding: 20px;
 }
 
-#main-content h2 {
+#main-content h1 {
   color: #2c3e50;
   margin-bottom: 20px;
 }
@@ -38,20 +41,44 @@ header h1 {
 
 /* Cartes des membres */
 .member-card {
-  background-color: #E9F8FC; 
-  border-radius: 10px;
-  padding: 30px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background-color: #E9F8FC;
+  border-radius: 10px; /* courbure de la bordure*/
+  padding: 30px; /* grandeur de la card*/
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /*ombre couleur + intensité*/
   text-align: left;
 }
-
 /* Paragraphes à l'intérieur des cartes */
 .member-card p {
- margin: 5px 0;
- line-height: 1.5;
+  margin: 5px 0;
+  line-height: 1.5; /* espace entre les lignes*/
 }
-
 /* Faire que la 5ème carte prenne toute la largeur */
 .members-grid .member-card:nth-child(5) {
- grid-column: 1 / -1; /* prend toutes les colonnes disponibles */
+  grid-column: 1 / -1; /* prend toutes les colonnes disponibles */
+}
+
+/* Boutons "En savoir plus" */
+.info-btn {
+  margin-top: 10px; /* espacé du texte*/
+  padding: 12px 12px; /* carré du savoir plus*/
+  background-color: #2c3e50;
+  color: white;
+  border-radius: 8px; /* angle du bouton*/
+  cursor: pointer; /* change en main*/
+  border: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.info-btn:hover {
+  background-color: #1fa2d8; /* change de couleur quand click*/
+  transform: translateY(-2px);
+}
+
+/* Infos supplémentaires */
+.extra-info {
+  display: none; /* caché au départ */
+  margin-top: 10px;
+  background-color: #d9f0fa;
+  padding: 10px;
+  border-radius: 6px;
 }
