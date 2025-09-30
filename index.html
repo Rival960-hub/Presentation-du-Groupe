@@ -13,29 +13,6 @@
   <p>Option SISR (Réseaux) | Option SLAM (Développement)</p>
 </header>
 
-  <script>
-// Sélectionne tous les boutons "En savoir plus" dans la page
-document.querySelectorAll('.info-btn').forEach(btn => {
-
-  // Pour chaque bouton, on ajoute un écouteur d'événement "click"
-  btn.addEventListener('click', function() {
-
-    // "this" fait référence au bouton cliqué
-    // nextElementSibling récupère l'élément juste après le bouton dans le HTML (ici .extra-info)
-    const extra = this.nextElementSibling;
-
-    // Vérifie si le div .extra-info est caché ou vide
-    if (extra.style.display === 'none' || extra.style.display === '') {
-      // Si oui, on l'affiche
-      extra.style.display = 'block';
-    } else {
-      // Sinon, on le cache
-      extra.style.display = 'none';
-    }
-  });
-});
-</script>
-
 <section id="main-content">
   <h1>Notre équipe</h1>
 
@@ -89,4 +66,26 @@ document.querySelectorAll('.info-btn').forEach(btn => {
 
   </div>
 </section>
+  <script>
+// Sélectionne tous les boutons "En savoir plus" dans la page
+document.querySelectorAll('.info-btn').forEach(btn => {
+
+  // Pour chaque bouton, on ajoute un écouteur d'événement "click"
+  btn.addEventListener('click', function() {
+
+    // "this" fait référence au bouton cliqué
+    // nextElementSibling récupère l'élément juste après le bouton dans le HTML (ici .extra-info)
+    const extra = this.nextElementSibling;
+
+    // Vérifie si le div .extra-info est caché ou vide
+    if (extra.style.display === 'none' || extra.style.display === '') {
+      // Si oui, on l'affiche
+      extra.style.display = 'block';
+    } else {
+      // Sinon, on le cache
+      extra.style.display = 'none';
+    }
+  });
+});
+</script>
 </body>
